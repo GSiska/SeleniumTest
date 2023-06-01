@@ -20,7 +20,7 @@ class SeleniumTest2 {
                     .findElement(By.xpath("//h2[@style='color:#800080;font-size:28px;font-weight:700;']"))
                     .isDisplayed(), "Element //h2[@style='color:#800080;font-size:28px;font-weight:700; not found");
         }catch(Exception e){
-            System.out.println("Assert Error");
+            System.out.println("Assertion Error");
         }
     }
 }
