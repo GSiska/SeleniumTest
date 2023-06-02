@@ -46,6 +46,10 @@ class SeleniumTest2 {
         Assert.isTrue(firstProductName.equals("Sauce Labs Fleece Jacket"),"Sauce Labs Fleece Jacket is not displayed!");
         Assert.isTrue(firstProductPrice.equals("$49.99"),"$49.99 is not found!");
 
+        //Verify user can buy the product
+        WebElement addToCartButton=driver.findElement(By.xpath("//button[@name='add-to-cart-sauce-labs-fleece-jacket']"));
+        addToCartButton.click();
+
 
     }
 }
