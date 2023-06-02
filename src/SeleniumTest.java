@@ -68,6 +68,17 @@ class SeleniumTest2 {
         WebElement continueButton=driver.findElement(By.xpath("//input[@id='continue']"));
         continueButton.click();
 
+        //Verify order status
+
+        String paymentInformationHeaderTitle=driver.findElement(By.xpath("//div[@class='summary_info_label'][1]")).getText();
+        String shippingInformationHeaderTitle=driver.findElement(By.xpath("//div[@class='summary_info_label'][2]")).getText();
+        String priceTotalHeaderTitle=driver.findElement(By.xpath("//div[@class='summary_info_label'][3]")).getText();
+        String totalSummaryHeaderTitle=driver.findElement(By.xpath("//div[contains(@class,'summary_total_label')]")).getText();
+
+        Assert.isTrue(paymentInformationHeaderTitle.equals("Payment Information"),"Payment Information Header not found!");
+        Assert.isTrue(shippingInformationHeaderTitle.equals("Shipping Information"),"Shipping Information Header not found!");
+        Assert.isTrue(priceTotalHeaderTitle.equals("Price Total"),"Price Total Header not found!");
+        Assert.isTrue(totalSummaryHeaderTitle.equals("Total"),"Summary Total Header not found!");
 
     }
 }
