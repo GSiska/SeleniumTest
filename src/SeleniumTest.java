@@ -53,7 +53,7 @@ class SeleniumTest2 {
         WebElement shoppingCart=driver.findElement(By.xpath("//span[@class='shopping_cart_badge']"));
         shoppingCart.click();
 
-        WebElement checkoutButton=driver.findElement(By.xpath("//button[contains(@class,'checkout_button')"));
+        WebElement checkoutButton=driver.findElement(By.xpath("//button[contains(@class,'checkout_button')]"));
         checkoutButton.click();
 
 
