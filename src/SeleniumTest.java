@@ -56,6 +56,18 @@ class SeleniumTest2 {
         WebElement checkoutButton=driver.findElement(By.xpath("//button[contains(@class,'checkout_button')]"));
         checkoutButton.click();
 
+        WebElement firstNameInput=driver.findElement(By.xpath("//input[@id='first-name']"));
+        firstNameInput.sendKeys("Gabriella");
+
+        WebElement lastNameInput=driver.findElement(By.xpath("//input[@id='last-name']"));
+        lastNameInput.sendKeys("Siska");
+
+        WebElement postalCodeInput=driver.findElement(By.xpath("//input[@id='postal-code']"));
+        postalCodeInput.sendKeys("11440");
+
+        WebElement continueButton=driver.findElement(By.xpath("//input[@id='continue']"));
+        continueButton.click();
+
 
     }
 }
