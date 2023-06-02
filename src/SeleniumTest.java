@@ -35,5 +35,17 @@ class SeleniumTest2 {
 
         Assert.isTrue(highestProduct.equals("$49.99"),"At the top of the product is not the highest price");
 
+        //Verify user can select the first product
+
+        WebElement firstProduct=driver.findElement(By.xpath("//div[@class='inventory_item'][1]/div[2]/div/a/div"));
+        firstProduct.click();
+
+        String firstProductName=driver.findElement(By.xpath("//div[@class='inventory_details_name large_size']")).getText();
+        String firstProductPrice=driver.findElement(By.xpath("//div[@class='inventory_details_price']")).getText();
+
+        Assert.isTrue(firstProductName.equals("Sauce Labs Fleece Jacket"),"Sauce Labs Fleece Jacket is not displayed!");
+        Assert.isTrue(firstProductPrice.equals("$49.99"),"$49.99 is not found!");
+
+
     }
 }
